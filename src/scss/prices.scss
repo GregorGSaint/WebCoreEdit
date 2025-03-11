@@ -1,0 +1,272 @@
+
+.prices {
+    margin-bottom: 51px;
+    background-color: $color-1;
+
+    &__head {
+        padding: 16px 0 16px 16px;
+        margin: 0;
+        background-color: $color-2;
+        font-family: TTLakes-Medium;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: inherit;
+        color: $color-6;
+        background: linear-gradient(-270deg, $color-1 0%, $color-2 98.61%);
+        border-top: 1px solid $color-3;
+
+        @media (min-width: 768px) {
+        padding-left: 24px;
+        margin-bottom: 7px;
+        }
+
+        @media (min-width: 1366px) {
+        padding-left: 32px;    
+        }
+    }
+    
+    &__list {
+        margin: 16px 0 0 8px; 
+
+        @media (min-width: 768px) {display: none;}
+
+        .swiper-slide {
+            margin-left: 16px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            .list__element {
+                padding: 0 0 0 24px;
+                box-sizing: border-box;
+                font-family:TTLakes-Medium;
+                width: 260px;
+                height: 200px;
+                border: 1px solid $color-4;
+                border-radius: 6px;
+                margin-bottom: 42px;
+    
+                & p {
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+    
+                    &:first-child,
+                    &:nth-child(3),
+                    &:nth-child(5) {
+                        opacity: 0.72;
+                        margin: 16px 0 0 0;
+                        line-height: 16px;
+                        color: $color-6;
+                    }
+                }
+            }
+          }
+        
+        .list__button {
+            font-family:TTLakes-Bold;
+            font-size: 12px;
+            letter-spacing: -0.15px;
+            line-height: 24px;
+            padding: 3px 0 0 10px;
+            box-sizing: border-box;
+            position: absolute;
+            border: 1px solid $color-12;
+            border-radius: 16px;
+            background:$color-12 url(../img/goside.svg) no-repeat 90% 50%;
+            top: 145px;
+            left: 125px;
+            width: 119px;
+            height: 32px;
+            color: $color-2;
+            text-decoration: none;
+
+            @media (min-width: 768px) {display: none;}
+
+            &:hover {
+                transition: opacity 2s ease; 
+                opacity: 0.5; 
+            }
+        }  
+    }
+
+    &__list-head {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            margin: auto;
+            width: 96%;
+        }
+
+        table {
+            font-family:TTLakes-Regular;
+            margin: auto;
+            width: 96%;
+            font-size: 14px;
+            vertical-align: middle;
+            border-collapse: collapse;
+
+            td {
+                opacity: 0.72;
+                color: $color-6;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                box-sizing: border-box;
+                height: 65px;
+                
+                &:nth-child(1) {
+                    width: 50%;
+                }
+            
+                &:nth-child(2) {
+                    width: 74px;
+                }
+            
+                &:nth-child(3) {
+                    align-items: center;
+                    width: 81px;
+                    display: flex;
+                    margin: auto;
+                }
+            
+                &:nth-child(4) {
+                    width: 119px;
+                }
+            }
+        }
+     }
+    
+     &__list-content {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            background-color: $color-2;
+            margin: auto;
+            width: 96%;
+
+            table {
+                font-family:TTLakes-Regular;
+                margin: auto;
+                width: 96%;
+                font-size: 14px;
+                vertical-align: middle;
+                border-collapse: collapse;
+
+                tr {
+                    border-bottom: 1px solid $color-4;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    td {
+                        box-sizing: border-box;
+                        height: 65px;
+                        
+                        &:nth-child(1) {
+                            width: 50%;
+                        }
+                    
+                        &:nth-child(2) {
+                            width: 74px;
+                        }
+                    
+                        &:nth-child(3) {
+                            align-items: center;
+                            width: 81px;
+                            display: flex;
+                            margin: auto;
+                        }
+                    
+                        &:nth-child(4) {
+                            width: 119px;
+
+                            .list-content__button {
+                                display: inline-block;
+                                font-size: 12px;
+                                font-family:TTLakes-Bold;
+                                letter-spacing: -0.15px;
+                                line-height: 24px;
+                                padding:3px 0 0 10px;
+                                box-sizing: border-box;
+                                border: 1px solid $color-12;
+                                border-radius: 16px;
+                                background:$color-12 url(../img/goside.svg) no-repeat 90% 50%;
+                                width: 119px;
+                                height: 32px;
+                                color: $color-2;
+                                text-decoration: none;
+
+                                &:hover {
+                                    transition: opacity 2s ease; 
+                                    opacity: 0.5; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+        
+    &__info {
+        max-width: 425px;
+        margin:16px 16px 0 16px;
+        font-family:TTLakes-Medium;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+
+        @media (min-width: 768px) {margin: 24px 0 0 24px;}
+        @media (min-width: 1366px) {margin: 24px 0 0 32px;}
+    }
+    
+    &__button {
+        text-align: start;
+        width: 192px;
+        margin:16px 0 0 16px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing:-0.2px;
+        background: none;
+        font-family:TTLakes-Bold;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        outline: inherit;
+
+        @media (min-width: 360px) {width:auto;}
+
+        @media (min-width: 768px) {margin-left: 24px;}
+
+        @media (min-width: 1366px) {margin-left: 32px;}
+
+        &::after {
+            margin-top: -1px;
+            position: absolute;
+            content: url(../img/more.svg);  
+        }
+
+        &:hover {
+            transition: opacity 2s ease; 
+            opacity: 0.5; 
+        }
+    }
+    
+    span.swiper-pagination-bullet {
+        background: $color-10;
+        width: 12px;
+        height: 12px;
+
+        &-active {
+            background: $color-11;
+            width: 12px;
+            height: 12px;
+        }
+    }
+}

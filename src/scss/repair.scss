@@ -1,0 +1,141 @@
+
+.repair {
+    margin-bottom: 51px;
+    background-color: $color-1;
+
+    &__head {
+        padding: 16px 0 16px 16px;
+        background-color: $color-2;
+        font-family: TTLakes-Regular;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: inherit;
+        color: $color-6;
+        background: linear-gradient(-270deg, $color-1 0%, $color-2 98.61%);
+        border-top: 1px solid $color-3;
+
+        @media (min-width: 768px) {
+            margin: 8px 0 0 0;
+            padding-left: 24px;
+        }
+
+        @media (min-width: 1366px) {padding: 16px 0 16px 32px;}
+    }
+    
+    &__list {
+        margin: 16px 0 0 16px; 
+
+        @media (min-width: 768px) {margin: 8px 0 0 0;}
+
+        .swiper-wrapper {
+
+            @media (min-width: 768px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            div.swiper-slide {
+
+                @media (min-width: 768px) {
+                    width:248px;
+
+                    &:nth-child(4),
+                    &:nth-child(5),
+                    &:nth-child(6) {
+                        display: none;
+                    }                
+                }
+
+                @media (min-width: 1366px) {width:264px;}
+
+                .list__element {
+                    padding: 16px 0 0 16px;
+                    box-sizing: border-box;
+                    font-family:TTLakes-Medium;
+                    display: flex;
+                    width: 240px;
+                    background-color: $color-2;
+                    border: 1px solid $color-4;
+                    border-radius: 6px;
+                    margin-bottom: 42px;
+
+                    @media (min-width: 768px) {
+                        width: 224px;
+                        margin: 16px 0 0 24px;
+                    }
+
+                    @media (min-width: 1366px) {
+                        width: 240px;
+                        margin: 16px 0 0 32px;
+                    }
+                }
+                
+                .list__button {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background: url(../img/go.svg);
+                    margin: 86px 16px 16px auto;
+
+                    &:hover {
+                        transition: opacity 2s ease; 
+                        opacity: 0.5;  
+                    }
+                }
+            }
+        } 
+    }
+
+    span.swiper-pagination-bullet {
+        background: $color-10;
+        width: 12px;
+        height: 12px;
+    }
+    
+    span.swiper-pagination-bullet-active {
+        background: $color-11;
+        width: 12px;
+        height: 12px;
+    }
+
+    &__button {
+        margin: 16px 0 0 24px;
+        display: none;
+        font-family: TTLakes-Medium;
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        cursor: pointer;
+        border: hidden;
+        background: none;
+
+        @media (min-width: 768px) {display: block;}
+
+        @media (min-width: 1366px) {margin-left: 32px;}
+
+        &::before {
+            content: url(../img/expand.svg);
+            position: relative; 
+            left: -6px; 
+            top: 6px; 
+        }
+        
+        &:last-child {
+            display: none;
+
+            &::before {
+                content: url(../img/expand2.svg);
+            }
+        }
+
+        &:hover {
+            transition: opacity 2s ease; 
+            opacity: 0.5;  
+        }   
+    }
+}
+
+
+

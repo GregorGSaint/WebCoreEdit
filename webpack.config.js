@@ -1,0 +1,89 @@
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+module.exports = {
+  
+  entry: [
+    './src/js/index.js'
+  ],
+
+  
+  output: {
+    filename: './js/bundle.js'
+  },
+
+ 
+  devtool: "source-map",
+
+  module: {
+    rules: [
+      
+      {
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src/js'),
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          }
+        }
+      },
+
+      
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader', 
+          'sass-loader', 
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              sassOptions: {
+                includePaths: ['./src/scss']
+              }
+            }
+          }
+        ]
+      },
+
+      
+    ],
+  },
+  plugins: [
+    
+    new HtmlWebpackPlugin({
+      title: 'Webpack 4 Starter',
+      template: './src/index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      }
+    }),
+
+    
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
+
+    
+    new CopyWebpackPlugin({
+                   patterns: [
+                     {
+                       from: './src/img',
+                       to: './img',
+                     },
+                     {
+                       from: './src/fonts',
+                       to: './fonts', 
+                     },
+                   ],
+                 }),
+  ],
+};

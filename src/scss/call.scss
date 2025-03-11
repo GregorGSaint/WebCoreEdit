@@ -1,0 +1,136 @@
+.call {
+    z-index: 100; 
+    position: fixed; 
+    background-color: $color-2;
+    right: 0; 
+    top: 0; 
+    margin: 0 0 0 auto;
+    width: 100%; 
+    height: 100vh;
+    box-shadow: 16px 0px 52px 0px $color-8;
+    box-shadow: -2px 0px 4px 0px $color-13;
+
+
+    @media (min-width: 768px) {width: 440px;}
+
+    &__close {
+        content: url(../img/burger2.svg);
+        margin: 24px 0 40px 16px;
+
+        @media (min-width: 768px) {
+            margin: 32px 0 0 0;
+            position: absolute;
+            right: 473px;
+        }
+
+        &:hover {
+            transition: opacity 2s ease; 
+            opacity: 0.5;            
+        }
+    }
+    
+    &__header {
+        font-family:TTLakes-Bold;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        margin: 0 0 24px 16px;
+
+        @media (min-width: 768px) {
+            font-family:TTLakes-Bold;
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.6px;
+            margin-left: 32px;
+            padding-top: 40px;
+        }
+
+        &::before {
+            color: $color-6;
+            content: "";
+            position: relative;
+            width: 0px;
+            height: 36px;
+            right: 16px;
+            border: 2px solid $color-5;
+            border-radius: 0 6px 6px 0; 
+
+            @media (min-width: 1366px) {right: 32px;}
+        }
+    }
+    
+    .form__input {
+        box-sizing: border-box;
+        width: 288px;
+        height: 48px;
+        border: 1px solid $color-4;
+        border-radius: 6px;
+        font-family:TTLakes-Medium;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        padding-left: 16px;
+        margin: 0 0 16px 16px;
+
+        @media (min-width: 768px) {
+            width: 376px;
+            margin-left: 32px;
+        }
+
+        &::placeholder {
+            font-family:TTLakes-Medium;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $color-11;
+        }
+    }
+        
+    .form__text {
+        color: $color-6;
+        font-family:TTLakes-Medium;
+        font-size: 14px;
+        line-height: 16px; 
+        margin: 0 0 19px 16px;   
+
+        @media (min-width: 768px) {margin: 0 32px 19px 32px;}
+
+        & span {
+            cursor: pointer;
+            color: $color-12;
+
+            &:hover {
+                transition: opacity 2s ease; 
+                opacity: 0.5;            
+            }
+        }
+    }
+    
+    .form__button {
+        display: block;
+        font-size: 12px;
+        font-family:TTLakes-Bold;
+        letter-spacing: -0.15px;
+        line-height: 24px;
+        padding:0 0 0 18px;
+        box-sizing: border-box;
+        border: 1px solid $color-12;
+        border-radius: 16px;
+        background:$color-12 url(../img/goside.svg) no-repeat 90% 50%;
+        width: 136px;
+        height: 32px;
+        color: $color-2;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: start;
+        margin:0 16px 0 auto;
+
+        @media (min-width: 768px) {margin-right: 32px;}
+
+        &:hover {
+            transition: opacity 2s ease; 
+            opacity: 0.5;            
+        }
+    }
+}
+

@@ -1,0 +1,48 @@
+.footer {
+    border-top: 1px solid $color-3;
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & p {
+        text-align: center;
+        font-family:TTLakes-Medium;
+        font-size: 14px;
+        line-height: 16px;
+        color: #7E7E82;
+        opacity: 0.72;
+        margin: 16px 0 0 0; 
+
+        @media (min-width: 768px) {margin-top: 33px; }
+
+
+        &:first-child {
+            @media (min-width: 768px) {
+                min-width: 218px;
+                text-align: start;
+                margin-left: 24px;
+            }
+    }
+
+    &:nth-child(2) {  
+        @media (min-width: 768px) {
+            text-align: center;
+            min-width: 214px;   
+        } 
+    }
+
+    &:nth-child(3) {
+        @media (min-width: 768px) {
+            text-align: right;
+            margin-right: 24px;
+            max-width: 213px;
+        }
+
+        @media (min-width: 1366px) {max-width: 330px;}
+    } 
+  }
+}
+
+
