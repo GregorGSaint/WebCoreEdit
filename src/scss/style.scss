@@ -1,14 +1,10 @@
-@import url(colors.scss);
-@import url(fonts.scss);
-@import "~normalize.css";
-@import url(menu.scss);
-@import url(main.scss);
-@import url(brands.scss);
-@import url(repair.scss);
-@import url(prices.scss);
-@import url(footer.scss);
-@import url(call.scss);
-@import url(feedback.scss);
-
-
-
+@use "colors" as *; 
+@use "fonts" as *;
+@use "menu" as *;
+@use "main" as *;
+@use "brands" as *;
+@use "repair" as *;
+@use "prices" as *;
+@use "footer" as *;
+@use "call" as *;
+@use "feedback" as *;
