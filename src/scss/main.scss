@@ -63,7 +63,6 @@ body {
             width: 97px;
             height: 51px;
             margin: 18px auto 18px 0;
-            background-image: url(../img/Group-1.svg);
 
             @media (min-width: 768px) {margin-left: 24px;}
         } 
@@ -277,12 +276,8 @@ body {
             }
             
             .block__image {
-                // max-width: 100%;
-                width: -webkit-fill-available;
-                height: max-content;
-                background-image: url(../img/Picture3.png);
-                background-repeat: no-repeat;
-                background-position: center;
+                max-width: 100%;
+                height: auto;
 
                 @media (min-width: 768px) {
                     max-width: 50%;
